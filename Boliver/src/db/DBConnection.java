@@ -41,7 +41,11 @@ public interface DBConnection {
 	
 	public boolean updateOrderStatus(String orderId, String newStatus);
 	
-	public boolean cancelOrder(String oderId);
+	public boolean cancelOrder(String orderId);
 	
-	public boolean confirmOrder(String oderId);
+	public boolean confirmOrder(String orderId);
+	
+	public boolean validateOrderId(String orderId);
+	
+	public String getUserId(String username);
 }
