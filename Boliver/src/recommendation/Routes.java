@@ -100,27 +100,30 @@ public class Routes {
 		JSONObject addr = new JSONObject();
 		JSONObject droneObj = new JSONObject();
 		JSONObject groundBotObj = new JSONObject();
-		
-		addr.put("origin", origin)
+		try {
+			addr.put("origin", origin)
 			.put("destination", destination);
 		
-		droneObj.put("travel_time", drone.get("time")) // time unit = minutes
-		        .put("cost", dronePrice == -0.1 ? "nope" : dronePrice)
-		        .put("pickup_time", ClosestDroneBase == null ? "nope" : distanceOfCDB/drone.get("speed"))
-		        .put("travel_distance", distanceOfCDB == 0.0 ? "nope" : drone.get("distance") + distanceOfCDB) // distance unit = miles
-		        .put("avail_status", ClosestDroneBase == null ? "no" : "yes")
-		        .put("base", ClosestDroneBase == null ? "no available drone, try again later" : ClosestDroneBase.getAddress());
-		
-		groundBotObj.put("travel_time", groundRobot.getDuration_seconds()/60) // time unit = minutes
-			        .put("cost", groundPrice == -0.1 ? "nope" : groundPrice)
-			        .put("pickup_time", ClosestGrobotBase == null ? "no available groundBot, try again later" : dMatrixOfCGB.getDuration_seconds()/60)
-			        .put("travel_distance", dMatrixOfCGB == null ? "nope" : (groundRobot.getDistance_meters() + dMatrixOfCGB.getDistance_meters())/1609.344) // distance unit = miles
-			        .put("avail_status", ClosestGrobotBase == null ? "no" : "yes")
-			        .put("base", ClosestGrobotBase == null ? "no available groundBot, try again later" : ClosestGrobotBase.getAddress());
-		
-		mainObj.put("DeliveryAddress", addr)
-			   .put("Drone", droneObj)
-			   .put("GroundBot", groundBotObj);
+			droneObj.put("travel_time", drone.get("time")) // time unit = minutes
+			        .put("cost", dronePrice == -0.1 ? "nope" : dronePrice)
+			        .put("pickup_time", ClosestDroneBase == null ? "nope" : distanceOfCDB/drone.get("speed"))
+			        .put("travel_distance", distanceOfCDB == 0.0 ? "nope" : drone.get("distance") + distanceOfCDB) // distance unit = miles
+			        .put("avail_status", ClosestDroneBase == null ? "no" : "yes")
+			        .put("base", ClosestDroneBase == null ? "no available drone, try again later" : ClosestDroneBase.getAddress());
+			
+			groundBotObj.put("travel_time", groundRobot.getDuration_seconds()/60) // time unit = minutes
+				        .put("cost", groundPrice == -0.1 ? "nope" : groundPrice)
+				        .put("pickup_time", ClosestGrobotBase == null ? "no available groundBot, try again later" : dMatrixOfCGB.getDuration_seconds()/60)
+				        .put("travel_distance", dMatrixOfCGB == null ? "nope" : (groundRobot.getDistance_meters() + dMatrixOfCGB.getDistance_meters())/1609.344) // distance unit = miles
+				        .put("avail_status", ClosestGrobotBase == null ? "no" : "yes")
+				        .put("base", ClosestGrobotBase == null ? "no available groundBot, try again later" : ClosestGrobotBase.getAddress());
+			
+			mainObj.put("DeliveryAddress", addr)
+				   .put("Drone", droneObj)
+				   .put("GroundBot", groundBotObj);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 		     
 		return mainObj;
 	}

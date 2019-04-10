@@ -72,7 +72,7 @@ public class SubmitOrder extends HttpServlet {
 				String sender = input.getString("sender");
 				String receiver = input.getString("receiver");
 				
-				String pattern = "HH:mm zzz MM-dd-yyyy";
+				String pattern = "HH:mm MM-dd-yyyy";
 				SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
 				String createTimeProcess = simpleDateFormat.format(date);
 				
