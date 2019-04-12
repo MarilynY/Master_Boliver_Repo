@@ -18,7 +18,7 @@ and defined the minimum core services that we need to realize.
  `Insert logistics_app txt to show initial design document`
 
 Since we don't actually have any robots, we manipulated the database and used two GoogleAPIs to show case
-how our backend logic and frontend would realized this logistic service.
+how our backend logic and frontend would realize this logistic service.
 > In short, the user journey starts with getting information such as time and cost for a potential delivery order.
   Our logic is, find the closest bases, which have drone and ground robot,
   to the pick-up location provided by the user, and calculate the time and cost for both drone and ground robot to
