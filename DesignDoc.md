@@ -63,10 +63,10 @@ how our backend logic and frontend would realize this logistic service.
   > Used Zoom at first for group meetings,
     though as soon as we realize free accounts only support a short period of time,
     we switched to Google Hangout. However, towards the end, we found out if only two people are in a room,
-    zoom won't kick them out for a long period of time, unknown if they will ever be kicked out if only two people are in a room
+    zoom won't kick them out for a long period of time, it remains unknown if they will ever be kicked out if only two people are in a   room
 
   `Google Hangout`
-  > Google Hangout was almost the perfect solution for group meeting, not only we can share screen,
+  > Google Hangout is almost the perfect solution for group meeting, not only we can share screen,
     we can all share screen at the same time and we can easily switch between whose screen to watch.
     On top of everything, It is FREE!
 
