@@ -36,7 +36,7 @@ how our backend logic and frontend would realize this logistic service.
 
 ## 如何多角色分工合作，如何项目管理？
   `Trello`
-  > treelo was like a bulletin board,
+  > Trello was like a bulletin board,
     we put which jobs are assigned to which person on the board
     and update it every time someone finishes a job,
     we have columns like TODO and DONE
