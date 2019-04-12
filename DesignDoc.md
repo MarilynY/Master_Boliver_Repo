@@ -90,7 +90,7 @@ how our backend logic and frontend would realize this logistic service.
 * `Merge Conflict`
 >
 * `Maven deployment`
->  Had three problems during deployment our maven project
+>  Had three problems during deployment of our maven project
    * First, I didn't know that the project name in the pom file needs to be the same as the built and exported war file
      our deployed war file could not connect to database due to difference in name.war and that in pom file
    * Second, the UpperLower case of the name of tables in our mysql base did not match the name we used in our codes,
