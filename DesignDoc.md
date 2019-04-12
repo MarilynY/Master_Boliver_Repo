@@ -1,3 +1,6 @@
+## 最终产品的demo
+http://boliver-frontend.s3-website-us-west-1.amazonaws.com/home
+
 ## Project Motivation:
 * ###### Compare and contrast with other similar service, to demonstrate our unique? accomplishments
 * insert
@@ -153,6 +156,3 @@ how our backend logic and frontend would realize this logistic service.
    > user can browse all of their current orders, current as in any ongoing order that is not yet confirmed to be completed or canceled
    * ##### Get all history orders
    > user can browse all of their past orders, past as in any order with status "completed" or "canceled"
-
-## 最终产品的demo
-http://boliver-frontend.s3-website-us-west-1.amazonaws.com/home
