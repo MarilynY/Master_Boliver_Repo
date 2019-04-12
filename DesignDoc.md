@@ -114,7 +114,7 @@ how our backend logic and frontend would realize this logistic service.
 
 * `What if all robots are busy/unavailable`
 > At the moment, we just tell users to try again later. However, this is definitely not ideal becuase we would never want
-  our service to appeal as unavailable. We could implement a queue and when all robots are busy, instead of telling customers to
+  our service to appear as unavailable. We could implement a queue and when all robots are busy, instead of telling customers to
   try again later, we can place them in the queue and calculate a waiting time and tell them that they will need to wait for an estimated
   time before a robot is available to handle their delivery. To calcualte this estimated time, one way to solve it is to record an estimated avaiable
   time for each robot on mission, and sort this list so that we know of all the robots on mission, who could be the earliest to return and how long that is,
