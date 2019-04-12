@@ -118,7 +118,7 @@ how our backend logic and frontend would realize this logistic service.
   try again later, we can place them in the queue and calculate a waiting time and tell them that they will need to wait for an estimated
   time before a robot is available to handle their delivery. To calcualte this estimated time, one way to solve it is to record an estimated avaiable
   time for each robot on mission, and sort this list so that we know of all the robots on mission, who could be the earliest to return and how long that is,
-  so we can add this time and perhaps some specific time, which is needed for the robot to be recharged and ready for a new assignment,
+  so we can add this time and perhaps some other lengths of time, which is needed for the robot to be recharged and ready for a new assignment,
   and tell user that this is the estimated time before a robot can handle it, so we never appear `unavailable`, and our services
   is always `available`. Only sometimes it will take longer to fullfill a delivery order
 
