@@ -1,5 +1,5 @@
 ## 最终产品的demo
-http://boliver-frontend.s3-website-us-west-1.amazonaws.com/home
+http://boliver-frontend-kami.s3-website-us-west-1.amazonaws.com
 
 ## Project Motivation:
 * ###### Compare and contrast with other similar service, to demonstrate our unique? accomplishments
