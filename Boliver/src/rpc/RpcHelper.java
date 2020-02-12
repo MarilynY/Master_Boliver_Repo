@@ -14,9 +14,14 @@ public class RpcHelper {
 	// Writes a JSONArray to http response.
 	public static void writeJsonArray(HttpServletResponse response, JSONArray array) throws IOException{
 		response.setContentType("application/json");
-		//response.setHeader("Access-Control-Allow-Origin", "*");
-		response.setHeader("Access-Control-Allow-Origin", "http://localhost:3000/home");
-		PrintWriter out = response.getWriter();
+		//response.setHeader("Access-Control-Allow-Origin", "http://boliver-frontend.s3-website-us-west-1.amazonaws.com");
+		response.setHeader("Access-Control-Allow-Origin", "*");
+        response.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+        
+        
+        System.out.println("Access-Control-Allow-Origin" + response.getHeader("Access-Control-Allow-Origin"));
+		
+        PrintWriter out = response.getWriter();
 		out.print(array);
 		out.close();
 	}
@@ -24,9 +29,14 @@ public class RpcHelper {
     // Writes a JSONObject to http response.
 	public static void writeJsonObject(HttpServletResponse response, JSONObject obj) throws IOException {		
 		response.setContentType("application/json");
-		//response.setHeader("Access-Control-Allow-Origin", "*");
-		response.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
-		PrintWriter out = response.getWriter();
+		//response.setHeader("Access-Control-Allow-Origin", "http://boliver-frontend.s3-website-us-west-1.amazonaws.com");
+		response.setHeader("Access-Control-Allow-Origin", "*");
+		response.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+        
+        System.out.println("Access-Control-Allow-Origin header is: " + response.getHeader("Access-Control-Allow-Origin"));
+        System.out.println(response.getHeaderNames());
+        
+        PrintWriter out = response.getWriter();
 		out.print(obj);
 		out.close();
 	}

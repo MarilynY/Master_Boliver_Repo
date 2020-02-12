@@ -11,7 +11,7 @@ public class CalETime {
 		calendar.add(Calendar.MINUTE,Integer.parseInt(timeTaken)); 
 		
 		// create the desired display date/time pattern
-		String pattern = "HH:mm zzz MM-dd-yyyy";
+		String pattern = "HH:mm MM-dd-yyyy";
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
 		
 		// convert result to desired format and to string
